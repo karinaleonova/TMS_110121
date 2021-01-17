@@ -16,10 +16,10 @@ public class Lesson2 {
             System.out.println(sec);
 
 
-            System.out.println("a: " + min + " min " + sec + " sec");
-            System.out.println("b: " + h + " hours " + min + " min " + sec + " sec");
-            System.out.println("c:" + d + " days " + h + " hours " + min + " min " + sec + " sec");
-            System.out.println("d:" + w + " week " + d + " days " + h + " hours " + min + " min " + sec + " sec");
+            System.out.println("a: " + min + " min " + sec + " sec ");
+            System.out.println("b: " + h + " hours " + min + " min " + sec + " sec ");
+            System.out.println("c:" + d + " days " + h + " hours " + min + " min " + sec + " sec ");
+            System.out.println("d:" + w + " week " + d + " days " + h + " hours " + min + " min " + sec + " sec ");
 
         }
 }
