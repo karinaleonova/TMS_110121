@@ -3,17 +3,13 @@
 
 # Log file
 *.log
-Test*
-
-.DS_Store
-.idea/
 
 # BlueJ files
 *.ctxt
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
-workspace.code-workspace
+
 # Package Files #
 *.jar
 *.war
