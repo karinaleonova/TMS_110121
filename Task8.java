@@ -10,8 +10,7 @@ public class Task8 {
     public static void main(String[] args){
 
         Random rand = new Random();
-        int x = 444;
-         
+        int x = rand.nextInt(); 
     
         
          if ( x% 10 == 1 ){
