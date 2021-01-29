@@ -8,7 +8,10 @@ public class Task7 {
         int r = 3 ;
         int a = 2  ;
         int b = 9;
-        if (r * r >= (a * a + b * b) / 4)
+        int abS = a * b;
+        int rS = (int) (3.14 * r * r);
+
+        if (rS > abS)
         System.out.println("Yes");
         else
         System.out.println("No");
