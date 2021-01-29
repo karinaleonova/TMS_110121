@@ -10,16 +10,23 @@ public class Task8 {
     public static void main(String[] args){
 
         Random rand = new Random();
-        int x = rand.nextInt(); 
+        int x = 444;
+         
     
         
-         if ( x == 1 ){
+         if ( x% 10 == 1 ){
             System.out.println(x + " рубль");
         }
-         else if ( x >= 2 && x <= 4 ){
+         else if ( x % 10 == 2 ){
             System.out.println(x + " рубля");
         }
-         else if ( x > 0 ) {
+        else if ( x % 10 == 3 ){
+            System.out.println(x + " рубля");
+        }
+        else if ( x % 10 == 4 ){
+            System.out.println(x + " рубля");
+        }
+        else if ( x > 0 ) {
             System.out.println(x + " рублей");
         }
     }
