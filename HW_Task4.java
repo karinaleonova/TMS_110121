@@ -3,23 +3,23 @@
 public class HW_Task4 {
     public static void main(String[] args) {
 
-        positiveNumber(-1, -2, -3);
+        System.out.println(positiveNumber(1, 2, 3));
 
     }
 
-    public static void positiveNumber(int a, int b, int c) {
+    public static  int positiveNumber(int a, int b, int c) {
+            int count = 0;  
+            if(a > 0) count++;
+            if(b > 0) count++;
+            if(c > 0) count++;
 
-        if (a > 0 && b > 0 && c > 0) {
-            System.out.println("Three positive numbers !");
+            return count;
+
         }
-        if (a > 0 && b > 0 && c < 0 || a > 0 && b < 0 && c > 0 || a < 0 && b > 0 && c > 0) {
-            System.out.println("Two positive numbers !");
-        }
-        if (a < 0 && b < 0 && c > 0 || a < 0 && b > 0 && c < 0 || a > 0 && b < 0 && c < 0) {
-            System.out.println("One positive numbers !");
-        } else
-            System.out.println("No positive numbers !");
+        
+        
+
+    
 
     }
 
-}
