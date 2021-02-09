@@ -11,7 +11,6 @@ public class HW_Task3 {
     public static void newNumber(int i) {
         if (i > 0) {
             i = i + 1;
-            ;
             System.out.println(i);
         } else if (i < 0) {
             i = i - 2;
