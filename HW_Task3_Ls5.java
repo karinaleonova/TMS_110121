@@ -4,7 +4,7 @@ public class HW_Task3_Ls5 {
     public static void main(String[] args) {
 
         int count = 0;
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 256; i++) {
             if (i % 2 == 0) {
                 count += i;
             }

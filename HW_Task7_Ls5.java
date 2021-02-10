@@ -5,7 +5,7 @@ public class HW_Task7_Ls5 {
 
         
         int count = 0;
-        for (int i = 0; i < 9; i++) {
+        for (int i = 0; i < 99; i++) {
             if (i % 2 != 0) {
 
                 count += i;
