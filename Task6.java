@@ -14,8 +14,7 @@ public class Task6 {
         if ( i % 2 == 0){
             System.out.println("This is an even number ");
         }
-        else System.out.println("Isn't an even number ");
-
+    
         if( i % 10 == 7){
             System.out.println("The last number is 7");
         }
