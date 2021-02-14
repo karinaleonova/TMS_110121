@@ -10,12 +10,9 @@ public class Game {
                 { "7", "7" }, { "8", "8" }, { "9", "9" } };
 
         boolean stopTheGame = false;
-
-
-        
+ 
         while (!stopTheGame) {
-           
-
+ 
             for (int i = 0; i < gridIndex.length; i++) {
                 System.out.print(gridIndex[i][1] + " ");
                 if (i == 2 || i == 5) {
@@ -24,7 +21,6 @@ public class Game {
                 if (i == 0 || i == 1 || i == 3 || i == 4 || i == 6 || i == 7)
                     System.out.print("| ");
             }
-
 
             System.out.println("\n\nWhere do you want to put 'X' ?");
             System.out.println("Only numbers from 1-9 :");
@@ -90,15 +86,9 @@ public class Game {
                     stopTheGame = true;
                     break;
                 }
-   
 
                 count++;
             }
-
-
-
-
-
                 if (count == 9) {
                     System.out.println("\nNO WINNER!!!\n");
                     stopTheGame = true;
