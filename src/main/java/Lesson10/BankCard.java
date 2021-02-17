@@ -10,6 +10,18 @@ public class BankCard {
     private final String client;
     private final int limit;
 
+    public static void main(String[] args) {
+
+
+        BankCard visa = new Visa("Tom", 1000);
+        Visa visaC = new VisaClassic("Jill", 1500);
+        Visa visaG = new VisaGold("Eric", 30000);
+
+        List<BankCard> discotheque = Arrays.asList( visa, visaC,visaG);
+        for (BankCard d : discotheque) {
+            d.printLimit();
+        }
+    }
 
     public BankCard(String name ,int limit) {
         this.client = name;
@@ -55,22 +67,5 @@ class VisaGold extends Visa{
         System.out.println( toString() + " , I have VisaGold Bank Card");
     }
 }
-
-
-class Main {
-    public static void main(String[] args) {
-
-
-        BankCard visa = new Visa("Tom", 1000);
-        Visa visaC = new VisaClassic("Jill", 1500);
-        Visa visaG = new VisaGold("Eric", 30000);
-
-        List<BankCard> discotheque = Arrays.asList( visa, visaC,visaG);
-        for (BankCard d : discotheque) {
-            d.printLimit();
-        }
-    }}
-
-
 
 
