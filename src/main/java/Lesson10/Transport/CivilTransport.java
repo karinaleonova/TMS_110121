@@ -54,9 +54,8 @@ public void passengerCapacity(int passNum, int allPassNum){
     }
     @Override
     public void printAllTransportFeature() {
-        System.out.println("Car brand - " + getCarBrand() + " ,car weight - " + getWeight()
-                + "kg , car power - " + getPower() +" h.p  and killowatt - " + powerCalculation()
-                +  ", car max speed - " + getMaxSpeed() + " , wingspan - " + getWingspan()+ ", runway length - "
+    super.printAllTransportFeature();
+        System.out.println("wingspan - " + getWingspan()+ ", runway length - "
                 + getRunwayLength() + ", passenger num - " + passengerNum + ", have business class - " + businessClass);
     }
 }

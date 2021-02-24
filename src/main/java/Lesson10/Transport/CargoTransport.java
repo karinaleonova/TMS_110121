@@ -55,9 +55,8 @@ public class CargoTransport extends LandTransport{
 
     @Override
     public void printAllTransportFeature() {
-        System.out.println("Car brand - " + getCarBrand() + " ,car weight - " + getWeight()
-                + "kg , car power - " + getPower() +"h.p  and killowatt - " + powerCalculation() +
-                " , car max speed - " + getMaxSpeed() + ", wheels num - " + getWheelCount() +
-                ", fuel consumption - " + getFuelConsumption() + ", car capacity - " + cargoCapacity);
+       super.printAllTransportFeature();
+        System.out.println(" , cargo capacity - " + cargoCapacity + ", wheels - " + getWheelCount() + ", fuelConsumption - " + getFuelConsumption());
     }
 }
+
