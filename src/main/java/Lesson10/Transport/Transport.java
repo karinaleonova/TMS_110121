@@ -41,7 +41,9 @@ public abstract class Transport {
     }
 
     public void printAllTransportFeature(){
-        System.out.println(getCarBrand()+ getMaxSpeed() + getPower() + getWeight() );
+        System.out.println("Car brand - " + getCarBrand() + " ,car weight - " + getWeight()
+                + "kg , car power - " + getPower() +" h.p  and killowatt - " + powerCalculation()
+                +  ", car max speed - " + getMaxSpeed());
     }
 
     public static void main(String[] args) {

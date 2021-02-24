@@ -73,10 +73,7 @@ public class PassengerTransport extends LandTransport {
 
     @Override
     public void printAllTransportFeature() {
-        System.out.println("Car brand - " + getCarBrand() + " ,car weight - " + getWeight()
-                + "kg , car power - " + getPower() +"h.p  and killowatt - " + powerCalculation()+ ", car max speed - "
-                + getMaxSpeed() + ", wheels num - " + getWheelCount() + ", fuel consumption - "
-                + getFuelConsumption() + ", car capacity - " + " , car body - " + bodyType +
-                ", car passenger num - "+ passengerNum);
+        super.printAllTransportFeature();
+        System.out.println("car body - " + bodyType + ", car passenger num - "+ passengerNum + ", wheels - " + getWheelCount() + ", fuelConsumption - " + getFuelConsumption());
     }
 }

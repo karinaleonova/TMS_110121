@@ -60,9 +60,8 @@ public class MilitaryTransport extends AirTransport{
     }
     @Override
     public void printAllTransportFeature() {
-        System.out.println("Car brand - " + getCarBrand() + " ,car weight - " + getWeight()
-                + "kg , car power - " + getPower() + " h.p  and killowatt - " + powerCalculation()+
-                " , car max speed - " + getMaxSpeed()+ " , wingspan - " + getWingspan()+ ", runway length - "
+        super.printAllTransportFeature();
+        System.out.println("wingspan - " + getWingspan()+ ", runway length - "
                 + getRunwayLength() + ", rocket num - " + rocketNum + ", Have catapult - " + catapult);
     }
 }
