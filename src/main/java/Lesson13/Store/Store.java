@@ -17,19 +17,24 @@ import java.util.*;
 
 public class Store{
     private static ArrayList<Product> list = new ArrayList<>();
-    private static ArrayList<Integer> usedId = new ArrayList<>();
-    private static ArrayList<Integer> usedPrice = new ArrayList<>();
-
 
     public static void addNewProduct(Product product){
-        if(!usedId.contains(product.getId())){
-            usedId.add(product.getId());
+        boolean addProduct = true;
+        for (Product pp : list) {
+            if (product.getId() == pp.getId()) {
+                list.remove(product);
+        addProduct = false;
+                break;
+            }
+        }
+        if (addProduct) {
             list.add(product);
         }
     }
     public static ArrayList<Product> returnArrayList(){
         return list;
     }
+
     public static void removeProductId(Product product){
 
         list.remove(product.getId());
