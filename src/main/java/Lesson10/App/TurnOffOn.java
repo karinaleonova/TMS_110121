@@ -2,15 +2,11 @@ package Lesson10.App;
 
 public interface TurnOffOn {
 
-
-
-    static boolean appOn(Object o){
-        System.out.println("If turn on - true, turn on - false:");
-        return true;
+    static String appOn(Object o){
+        return o + " - Is turn on";
     }
 
-     static boolean appOff(Object o){
-         System.out.println("If turn on - true, turn on - false:");
-        return false;
+     static String appOff(Object o){
+        return o + " - Is turn off";
     }
 }

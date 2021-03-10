@@ -1,10 +1,10 @@
 package Lesson10.App;
 
 public class SmallApp extends Appliances{
-    int length;
+    private int length;
 
-    public int returnLength(int length){
-        System.out.println("Small Appliances length is (sm) : ");
+    public int returnLength(Object o, int length){
+        System.out.println(o + " - length is (sm) : ");
         return length;
     }
 

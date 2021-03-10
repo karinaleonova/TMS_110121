@@ -6,8 +6,10 @@ import java.util.List;
 public class Run {
         public static void main(String[] args) {
 
-        Visa visaC = new VisaClassic("Jill", 1500);
+        Visa visaC = new VisaClassic("Jill", 1500,8);
         Visa visaG = new VisaGold("Eric", 30000);
+
+
             System.out.println(visaC.returnVisaString());
 
         List<BankCard> discotheque = Arrays.asList(visaC,visaG);

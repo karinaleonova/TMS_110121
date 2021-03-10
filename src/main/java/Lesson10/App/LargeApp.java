@@ -1,10 +1,10 @@
 package Lesson10.App;
 
 public class LargeApp extends Appliances {
-     int weight;
+     private int weight;
 
-     public int returnWeight(int weight){
-        System.out.println("Large Appliances weight is (kg): ");
+     public int returnWeight(Object o, int weight){
+        System.out.println(o + " - weight is (kg): ");
          return weight;
      }
 
