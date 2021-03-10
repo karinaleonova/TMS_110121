@@ -14,6 +14,10 @@ public  abstract class Appliances implements TurnOffOn{
         this.power = power;
     }
 
+    public String getModel() {
+        return model;
+    }
+
     public void printApp(){
         System.out.println(toString() + " , Appliances ");
     }

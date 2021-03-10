@@ -8,12 +8,16 @@ public class Fridge extends LargeApp implements TurnOffOn{
     }
 
     @Override
-    public int returnWeight(int weight) {
-        System.out.println("Fridge weight is (kg) :");
-        return weight;
+    public int returnWeight(Object o, int weight) {
+        return super.returnWeight(o, weight);
     }
+
+    public static String freeze(){
+        return ", Can freeze";
+    }
+
     @Override
     public void printApp() {
-        System.out.println( toString() + " , This is a Fridge , Large Appliance");
+        System.out.println( toString() + " , This is a Fridge , Large Appliance" + freeze());
     }
 }
