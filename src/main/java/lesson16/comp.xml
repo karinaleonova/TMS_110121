@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<devices>
+    <device isbn="MacBookAir">
+        <date>2015</date>
+        <details>
+            <name>Motherboard</name>
+            <origin>USA</origin>
+            <price currency="USD">195</price>
+            <critical>yes</critical>
+        </details>
+        <details>
+            <name>HDD</name>
+            <origin>USA</origin>
+            <price currency="USD">795</price>
+            <critical>yes</critical>
+        </details>
+        <details>
+            <name>CD-ROM</name>
+            <origin>USA</origin>
+            <price currency="USD">95</price>
+            <critical>no</critical>
+        </details>
+    </device>
+    <device isbn="AsusZenbook">
+        <date>2019</date>
+        <details>
+            <name>Motherboard</name>
+            <origin>South Korea</origin>
+            <price currency="EURO">700</price>
+            <critical>yes</critical>
+        </details>
+        <details>
+            <name>RAM</name>
+            <origin>South Korea</origin>
+            <price currency="EURO">460</price>
+            <critical>yes</critical>
+        </details>
+        <details>
+            <name>DVD-ROM</name>
+            <origin>China</origin>
+            <price currency="EURO">195</price>
+            <critical>no</critical>
+        </details>
+    </device>
+</devices>
