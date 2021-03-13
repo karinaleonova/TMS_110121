@@ -1,13 +1,10 @@
-package Lesson15.dopTask3;
+package lesson15.dopTask3;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileReader;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.Scanner;
 import java.util.Set;
 
 //3) Проверка на цензуру:

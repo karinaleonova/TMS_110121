@@ -1,11 +1,9 @@
-package Lesson15.Task35;
+package lesson15.task35;
 
 //Записать в двоичный файл 20 случайных чисел. Прочитать записанный файл,
 //        распечатать числа и их среднее арифметическое.
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Random;
 
 public class Task35 {
 
@@ -49,11 +47,12 @@ public class Task35 {
             } catch (EOFException e) {
                 break;
             }
+            finally {
+                if (inPut == null) {
+                    break;
+                }
+            }
         }
-        if (inPut != null) {
-            inPut.close();
-        }
-
         System.out.println("\n Average : " + sumCount / 20);
     }
 }

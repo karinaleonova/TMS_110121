@@ -1,4 +1,4 @@
-package Lesson15.Task34;
+package lesson15.task34;
 
 //Имеется файл с текстом, в котором присутствуют числа. Найти все числа,
 //        распечатать, посчитать сумму, убрать все повторяющиеся числа и снова
@@ -13,20 +13,20 @@ public class Task34 {
         String fileName = "src/main/java/Lesson15/Task34/num.txt";
         Set<String> set = new HashSet<>();
         String s = null;
-        String ss = null;
         int sum = 0;
 
         File file = new File(fileName);
         BufferedReader reader = new BufferedReader(new FileReader(file));
 
             while ((s = reader.readLine()) != null) {
-                String [] p = s.split("[\\\\/№;:а-яА-Яa-zA-Z?!,.\\-(){}\\[\\]@#\\$%^&?*~<>\\s]+");
+                String [] p = s.split("[^0-9]");
+                for (int i = 0; i < p.length; i++) {
 
-                for(String s1 : p) {
-                    set.add(s1);
-                    System.out.print(s1 + " ");
-                    if(s1.length()>0)
-                        sum += Integer.parseInt(s1);
+                    if (!p[i].equals("")) {
+                        System.out.print(p[i] + " ");
+                        sum += Integer.parseInt(p[i]);
+                        set.add(p[i]);
+                    }
                 }
             }
         System.out.println(" \n All numbers sum : " + sum);
