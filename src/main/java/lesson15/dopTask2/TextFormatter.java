@@ -1,4 +1,4 @@
-package Lesson15.dopTask2;
+package lesson15.dopTask2;
 
 //Пишем все в ООП стиле. Создаём класс TextFormatter
 //        в котором два статических метода:
@@ -40,4 +40,5 @@ public class TextFormatter {
         if(c >= 1) return true;
         else return false;
     }
+
 }

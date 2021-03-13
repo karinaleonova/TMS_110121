@@ -1,4 +1,4 @@
-package Lesson15.dopTask2;
+package lesson15.dopTask2;
 
 //2)Текстовый файл содержит текст. После запуска программы в другой файл
 //        должны записаться только те предложения в которых от 3-х до 5-ти слов. Если в
@@ -32,15 +32,9 @@ public class Task2 {
         }
         for(int i = 0; i < arr.size(); i++){
             int num = TextFormatter.returnWordsNum(arr.get(i));
-
-            if(num == 3 || num == 4 || num == 5){
-                newArr.add(arr.get(i));
-            }
-        }
-        for(int i =0; i < arr.size(); i++){
             boolean b = TextFormatter.isPalindrome(arr.get(i));
 
-            if(b==true) {
+            if((num >= 3 && num <=5)||b==true){
                 newArr.add(arr.get(i));
             }
         }
