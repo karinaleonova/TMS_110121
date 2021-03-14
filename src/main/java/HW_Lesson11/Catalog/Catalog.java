@@ -4,53 +4,67 @@ package HW_Lesson11.Catalog;
 //об истории выдачи книги читателям.
 
 public class Catalog {
-    private String visitorName;
+    private String libraryName;
 
-    private int days;
-
-    public Catalog(String visitorName, int days){
-        this.visitorName = visitorName;
-//        this.bookNumber = bookNumber;
-        this.days = days;
+    public Catalog() {
+        libraryName = "West Library";
     }
 
-    public void returnCatalogInfo() {
-
-        System.out.println(visitorName +" ," +" ,"+days+".");
+    public Catalog(String libraryName) {
+        this.libraryName = libraryName;
     }
 
-    public class BlackList{
+    class CatalogInfo {
+        private String clientName;
+        private int bookCount;
+        private int bookLeaseDays;
 
-        public boolean blackListReaders(){
-            if( days > 60 ){
-                System.out.println("The reader not returned books for more than 60 days , Reader is the BLACK LIST !");
-                return true;
-            }
-            else System.out.println(" Good reader !"); return false;
-        }
-    }
-
-    public class LoverToRead{
-        private int bookNumber;
-        public LoverToRead(int bookNumber){
-            this.bookNumber = bookNumber;
+        private boolean goodClient(){
+            if(bookCount>2)return true;
+            else return false;
         }
 
-        public int getBookNumber() {
-            return bookNumber;
+        CatalogInfo() {
+            this.clientName = "Alla";
+            this.bookCount = 3;
+            this.bookLeaseDays = 19;
+            this.goodClient();
         }
 
-        public void setBookNumber(int bookNumber) {
-            this.bookNumber = bookNumber;
+        CatalogInfo(String clientName,int bookCount, int bookLeaseDays) {
+            setClientName(clientName);
+            setBookCount(bookCount);
+            setBookLeaseDays(bookLeaseDays);
+
         }
 
-        public void readALot(){
-            if(this.bookNumber > 5) System.out.println(this.bookNumber + " this is a very good number of books, you love read books!");
+        public void setClientName(String clientName) {
+            this.clientName = clientName;
+        }
 
-            else if( this.bookNumber > 0 && this.bookNumber <= 5 ) System.out.println(" You like read books .");
+        public String getClientName() {
+            return clientName;
+        }
 
-            else System.out.println("Did not take any books.");
+        public void setBookCount(int bookCount) {
+            this.bookCount = bookCount;
+        }
 
+        public int getBookCount() {
+            return bookCount;
+        }
+
+        public void setBookLeaseDays(int bookLeaseDays) {
+            this.bookLeaseDays = bookLeaseDays;
+        }
+
+        public int getBookLeaseDays() {
+            return bookLeaseDays;
+        }
+
+        public void getFullInformation() {
+            System.out.println("Library - " + libraryName + ", client name - " + getClientName() + ", took " + bookCount + " books, for "
+                    + getBookLeaseDays() + " days, good client - " + goodClient());
         }
     }
 }

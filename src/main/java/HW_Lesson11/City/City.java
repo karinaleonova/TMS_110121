@@ -6,49 +6,70 @@ package HW_Lesson11.City;
 
 public class City {
     private String cityName;
-    private String cityLocation;
 
+    public City() {
+        cityName = "Rotterdam";
+    }
 
-    public City(String cityName,String cityLocation){
+    public City(String cityName) {
         this.cityName = cityName;
-        this.cityLocation = cityLocation;
-
-    }
-    public void returnCityInfo() {
-        System.out.println(cityName +" ,"+ cityLocation +".");
     }
 
-    public class EuropeanUnion{
+    class Information {
+        private String street;
+        private String parCity;
+        private int buildYear;
+        private long population;
 
-        public void inEurope(){
-            System.out.println(" - this city in the European Union");
+        Information() {
+            this.street = "Vondelweg";
+            this.parCity = "Center";
+            this.buildYear = 1956;
+            this.population = 67000;
         }
-        public void itIsNotEurope(){
-            System.out.println(" - this city is not in European Union");
-        }
-    }
-    public class CityPopulation{
-        private int population;
 
-        public int getPopulation() {
+        Information(String street, String parCity, int buildYear, long population) {
+            setStreet(street);
+            setParCity(parCity);
+            setBuildYear(buildYear);
+            setPopulation(population);
+        }
+
+        public void setStreet(String street) {
+            this.street = street;
+        }
+
+        public String getStreet() {
+            return street;
+        }
+
+        public void setParCity(String parCity) {
+            this.parCity = parCity;
+        }
+
+        public String getParCity() {
+            return parCity;
+        }
+
+        public void setBuildYear(int buildYear) {
+            this.buildYear = buildYear;
+        }
+
+        public int getBuildYear() {
+            return buildYear;
+        }
+
+        public void setPopulation(long population) {
+            this.population =  population;
+        }
+
+        public long getPopulation() {
             return population;
         }
 
-        public void setPopulation(int population) {
-            this.population = population;
-        }
-        public CityPopulation(int population){
-            this.population = population;
-        }
-
-        public boolean moreMillionPopulation(){
-            if(this.population > 1000000){
-                System.out.println("The population of the city is more than a million!!!");
-                return true;
-            }
-
-            else System.out.println("It is a small population city");
-            return false;
+        public void getFullInformation() {
+            System.out.println("City - " + cityName + ", street - " + getStreet() + ", " + getParCity() + ", "
+                    + getBuildYear() + " year, population - " + getPopulation());
         }
     }
 }
