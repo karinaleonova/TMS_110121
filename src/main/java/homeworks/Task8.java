@@ -1,3 +1,5 @@
+package homeworks;
+
 import java.util.Random;
 
 //Имеется целове число (задать с помощью Random rand = new Random(); int x =

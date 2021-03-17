@@ -1,4 +1,4 @@
-// 3)Вычислить: 1+2+4+8+...+256
+package homeworks;// 3)Вычислить: 1+2+4+8+...+256
 
 public class HW_Task3_Ls5 {
     public static void main(String[] args) {

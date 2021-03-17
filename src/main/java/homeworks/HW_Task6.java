@@ -1,4 +1,4 @@
-//6) Даны 2 числа. Вывести большее из них
+package homeworks;//6) Даны 2 числа. Вывести большее из них
 
 public class HW_Task6 {
     public static void main(String[] args) {
