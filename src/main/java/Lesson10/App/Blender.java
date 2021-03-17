@@ -2,7 +2,6 @@ package Lesson10.App;
 
 public class Blender extends SmallApp implements TurnOffOn {
 
-
     public Blender(String model, int power) {
         super(model, power);
     }
@@ -16,7 +15,7 @@ public class Blender extends SmallApp implements TurnOffOn {
     }
 
     @Override
-    public int returnLength(Object o, int length) {
-        return super.returnLength(o, length);
+    public int returnLength(int length) {
+        return super.returnLength(length);
     }
 }

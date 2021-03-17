@@ -3,8 +3,9 @@ package Lesson10.App;
 public class LargeApp extends Appliances {
      private int weight;
 
-     public int returnWeight(Object o, int weight){
-        System.out.println(o + " - weight is (kg): ");
+     public int returnWeight(int weight){
+
+        System.out.println(getModel() + " - weight is (kg): ");
          return weight;
      }
 

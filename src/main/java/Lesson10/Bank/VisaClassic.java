@@ -1,21 +1,25 @@
 package Lesson10.Bank;
 
+import java.io.PrintStream;
+
 public class VisaClassic extends Visa {
 
-    public VisaClassic(String name, int limit,int procent) {
+    public VisaClassic(String name, int limit) {
         super(name, limit);
+
+    }
+    public static double returnProcent(){
+        return 5.7;
     }
 
-    public static String bankProcent(){
-        return ", for payment you need to pay - 0.05% of the amount." ;
-    }
     @Override
     public void printLimit() {
-        System.out.println( toString() + " , I have VisaClassic Bank Card" + bankProcent());
+        System.out.println( toString() + " , I have VisaClassic Bank Card, bank procent " + returnProcent()+ "%");
     }
 
     @Override
     public String returnVisaString() {
         return super.returnVisaString();
     }
+
 }

@@ -3,8 +3,8 @@ package Lesson10.App;
 public class SmallApp extends Appliances{
     private int length;
 
-    public int returnLength(Object o, int length){
-        System.out.println(o + " - length is (sm) : ");
+    public int returnLength(int length){
+        System.out.println(getModel() + " - length is (sm) : ");
         return length;
     }
 
