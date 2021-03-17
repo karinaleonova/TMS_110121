@@ -22,8 +22,7 @@ public class Store{
         boolean addProduct = true;
         for (Product pp : list) {
             if (product.getId() == pp.getId()) {
-                list.remove(product);
-        addProduct = false;
+                addProduct = false;
                 break;
             }
         }
@@ -35,10 +34,13 @@ public class Store{
         return list;
     }
 
+
     public static void removeProductId(Product product){
 
         list.remove(product.getId());
     }
+
+
     public static void correctProductList(Product product,int newId, String newName,int newPrice){
 
         product.setName(newName);
