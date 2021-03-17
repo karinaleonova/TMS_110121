@@ -13,9 +13,9 @@ public class Run {
         for (Appliances d : discotheque) {
             d.printApp();
         }
-        System.out.println(fridge.returnWeight(fridge.getModel(),678));
-        System.out.println(blender.returnLength(blender.getModel(),15));
-        System.out.println(TurnOffOn.appOn(blender.getModel()));
-        System.out.println(TurnOffOn.appOff(fridge.getModel()));
+        System.out.println(fridge.returnWeight(678));
+        System.out.println(blender.returnLength(15));
+        System.out.println(fridge.getModel() + TurnOffOn.appOn());
+        System.out.println(fridge.getModel() + TurnOffOn.appOff());
     }
 }

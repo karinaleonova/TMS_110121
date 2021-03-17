@@ -1,7 +1,7 @@
 package Lesson10.Bank;
 
 public class VisaGold extends Visa {
-    //class VisaGold extends Visa{
+
     public VisaGold(String name, int limit) {
         super(name, limit);
     }

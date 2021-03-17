@@ -2,14 +2,13 @@ package Lesson10.App;
 
 public class Fridge extends LargeApp implements TurnOffOn{
 
-
     public Fridge(String model, int power) {
         super(model, power);
     }
 
     @Override
-    public int returnWeight(Object o, int weight) {
-        return super.returnWeight(o, weight);
+    public int returnWeight(int weight) {
+        return super.returnWeight(weight);
     }
 
     public static String freeze(){
