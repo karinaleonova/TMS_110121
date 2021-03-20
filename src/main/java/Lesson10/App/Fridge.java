@@ -1,22 +1,25 @@
 package Lesson10.App;
 
 public class Fridge extends LargeApp implements TurnOffOn{
+    private boolean canFreez;
 
-    public Fridge(String model, int power) {
-        super(model, power);
+    public Fridge(String model, int power,int weight,boolean canFreez) {
+        super(model, power,weight);
+        this.canFreez=canFreez;
     }
 
     @Override
-    public int returnWeight(int weight) {
-        return super.returnWeight(weight);
-    }
-
-    public static String freeze(){
-        return ", Can freeze";
+    public String appOn() {
+        return "Fridge turn on";
     }
 
     @Override
-    public void printApp() {
-        System.out.println( toString() + " , This is a Fridge , Large Appliance" + freeze());
+    public String appOff() {
+        return "Fridge turn off";
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", can freeze: " + canFreez;
     }
 }

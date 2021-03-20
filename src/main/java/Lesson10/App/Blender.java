@@ -1,21 +1,24 @@
 package Lesson10.App;
 
 public class Blender extends SmallApp implements TurnOffOn {
+    private boolean canMix;
 
-    public Blender(String model, int power) {
-        super(model, power);
-    }
-
-    public static String mixProduct(){
-        return ", Can mix products";
-    }
-    @Override
-    public void printApp() {
-        System.out.println( toString() + " , This is a Blender , Small Appliance" + mixProduct());
+    public Blender(String model, int power,int length,boolean canMix) {
+        super(model, power,length);
+        this.canMix=canMix;
     }
 
     @Override
-    public int returnLength(int length) {
-        return super.returnLength(length);
+    public String appOff() {
+        return "Blender turn off";
+    }
+
+    @Override
+    public String appOn() {
+        return "Blender turn on";
+    }
+    @Override
+    public String toString() {
+        return super.toString() + ", can mix - " + canMix;
     }
 }

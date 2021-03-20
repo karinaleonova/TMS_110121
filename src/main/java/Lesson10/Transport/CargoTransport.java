@@ -8,7 +8,13 @@ package Lesson10.Transport;
 
 
 public class CargoTransport extends LandTransport{
-    private int cargoCapacity = 3;
+    private int cargoCapacity;
+
+    public CargoTransport(String transportBrand, int power, int maxSpeed, int weight, int wheelCount, int fuelConsumption,int cargoCapacity) {
+        super(transportBrand, power, maxSpeed, weight, wheelCount, fuelConsumption);
+        this.cargoCapacity=cargoCapacity;
+    }
+
 
     public void capacity(int cargoCapacity,int cargoAllCapacity){
         if (cargoAllCapacity < cargoCapacity) {
@@ -19,44 +25,9 @@ public class CargoTransport extends LandTransport{
     }
 
     @Override
-    public String getCarBrand() {
-        return "SCANIA";
+    public String toString() {
+        return super.toString() +"cargoCapacity - " + cargoCapacity;
     }
 
-    @Override
-    public int getWeight() {
-        return 12000;
-    }
-
-    @Override
-    public int getPower() {
-        return 6;
-    }
-
-    @Override
-    public int getMaxSpeed() {
-        return 210;
-    }
-
-    @Override
-    public int getWheelCount() {
-        return 6;
-    }
-
-    @Override
-    public int getFuelConsumption() {
-        return 135;
-    }
-
-    @Override
-    public double powerCalculation() {
-        return getPower()/0.74;
-    }
-
-    @Override
-    public void printAllTransportFeature() {
-       super.printAllTransportFeature();
-        System.out.println(" , cargo capacity - " + cargoCapacity + ", wheels - " + getWheelCount() + ", fuelConsumption - " + getFuelConsumption());
-    }
 }
 

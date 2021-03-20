@@ -9,59 +9,31 @@ package Lesson10.Transport;
 
 
 public class MilitaryTransport extends AirTransport{
-    private int rocketNum = 6;
+    private int rocketNum;
     private boolean catapult;
 
-    public void checkRocketNum(int rocketNum){
+    public MilitaryTransport(String transportBrand, int power, int maxSpeed, int weight, int wingspan, int runwayLength,int rocketNum,boolean catapult) {
+        super(transportBrand, power, maxSpeed, weight, wingspan, runwayLength);
+        this.rocketNum=rocketNum;
+        this.catapult=catapult;
+    }
+
+    public String checkRocketNum(){
         if(rocketNum > 0  ){
-            System.out.println("Launch a rocket");
+            return "Launch a rocket";
         }
-        else System.out.println("No ammunition");
+        else return "No ammunition";
     }
 
-    public void checkCatapult(boolean b){
-        if ( b ) System.out.println("Bailout was successful");
-        else System.out.println("There is not such system");
-    }
-
-
-    @Override
-    public String getCarBrand() {
-        return "Dassault Rafale";
+    public String checkCatapult(){
+        if ( catapult ) {
+            return "Bailout was successful";
+        }
+        else return "There is not such system";
     }
 
     @Override
-    public int getPower() {
-        return 8;
-    }
-
-    @Override
-    public int getMaxSpeed() {
-        return 2130;
-    }
-
-    @Override
-    public int getWeight() {
-        return 9979;
-    }
-
-    @Override
-    public int getWingspan() {
-        return 11;
-    }
-
-    @Override
-    public int getRunwayLength() {
-        return 800;
-    }
-    @Override
-    public double powerCalculation() {
-        return getPower()/0.74;
-    }
-    @Override
-    public void printAllTransportFeature() {
-        super.printAllTransportFeature();
-        System.out.println("wingspan - " + getWingspan()+ ", runway length - "
-                + getRunwayLength() + ", rocket num - " + rocketNum + ", Have catapult - " + catapult);
+    public String toString() {
+        return super.toString() +", rocketNum - " + rocketNum + ", catapult- " + checkCatapult() + ", "+checkRocketNum();
     }
 }

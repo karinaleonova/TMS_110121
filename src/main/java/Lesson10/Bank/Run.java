@@ -6,14 +6,12 @@ import java.util.List;
 public class Run {
         public static void main(String[] args) {
 
-        Visa visaC = new VisaClassic("Jill", 1500);
-        Visa visaG = new VisaGold("Eric", 30000);
+        Visa visaG = new VisaGold("Eric", 30000,6666,7 );
+            Visa visaC = new VisaClassic("Jill", 1500,7800,1.1);
 
-            System.out.println(visaC.returnVisaString());
+            System.out.println(visaC.toString());
+            System.out.println(visaG.toString());
 
-        List<BankCard> discotheque = Arrays.asList(visaC,visaG);
-        for (BankCard d : discotheque) {
-            d.printLimit();
         }
     }
-}
+
