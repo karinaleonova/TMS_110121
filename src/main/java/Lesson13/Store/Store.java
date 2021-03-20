@@ -19,16 +19,12 @@ public class Store{
     private static ArrayList<Product> list = new ArrayList<>();
 
     public static void addNewProduct(Product product){
-        boolean addProduct = true;
         for (Product pp : list) {
             if (product.getId() == pp.getId()) {
-                addProduct = false;
-                break;
+                return;
             }
         }
-        if (addProduct) {
             list.add(product);
-        }
     }
     public static ArrayList<Product> returnArrayList(){
         return list;
