@@ -2,11 +2,7 @@ package Lesson10.App;
 
 public interface TurnOffOn {
 
-    static String appOn(){
-        return " - Is turn on";
-    }
+     String appOn();
 
-     static String appOff(){
-        return " - Is turn off";
-    }
+     String appOff();
 }

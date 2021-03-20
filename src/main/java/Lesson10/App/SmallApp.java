@@ -1,14 +1,25 @@
 package Lesson10.App;
 
-public class SmallApp extends Appliances{
+public class SmallApp extends Appliances implements TurnOffOn{
     private int length;
 
-    public int returnLength(int length){
-        System.out.println(getModel() + " - length is (sm) : ");
-        return length;
+
+    public SmallApp(String model, int power,int length) {
+        super(model, power);
+        this.length= length;
     }
 
-    public SmallApp(String model, int power) {
-        super(model, power);
+    @Override
+    public String appOn() {
+        return "Turn on";
+    }
+
+    @Override
+    public String appOff() {
+        return "Turn off";
+    }
+    @Override
+    public String toString() {
+        return super.toString() + " - length is (sm): " + length;
     }
 }

@@ -20,44 +20,15 @@ package Lesson10.Transport;
 import javax.crypto.spec.PSource;
 
 public class PassengerTransport extends LandTransport {
-    private String bodyType = "Pickup";
-    private int passengerNum = 8;
+    private String bodyType ;
+    private int passengerNum;
 
-
-
-    @Override
-    public String getCarBrand() {
-        return "Peugeot";
+    public PassengerTransport(String transportBrand, int power, int maxSpeed, int weight, int wheelCount, int fuelConsumption,String bodyType,int passengerNum) {
+        super(transportBrand, power, maxSpeed, weight, wheelCount, fuelConsumption);
+        this.bodyType=bodyType;
+        this.passengerNum=passengerNum;
     }
 
-    @Override
-    public int getWeight() {
-        return 5440;
-    }
-
-    @Override
-    public int getPower() {
-        return 8;
-    }
-
-    @Override
-    public int getMaxSpeed() {
-        return 260;
-    }
-
-    @Override
-    public int getWheelCount() {
-        return 4;
-    }
-
-    @Override
-    public int getFuelConsumption() {
-        return 140;
-    }
-    @Override
-    public double powerCalculation() {
-        return getPower()/0.74;
-    }
     private int useUpFuel(){
         int fuel = getMaxSpeed()/2;
         return fuel;
@@ -66,14 +37,13 @@ public class PassengerTransport extends LandTransport {
     public  double carRideKm(double time){
        double carKm = time * getMaxSpeed();
        double fuel = useUpFuel()/time;
-        System.out.println("During "+ time +" hours, an "+ getCarBrand() + " car moving at a maximum speed of "
+        System.out.println("During "+ time +" hours, car moving at a maximum speed of "
                 + getMaxSpeed() +" km / h will consume "+ fuel+" liters of fuel");
        return carKm;
     }
 
     @Override
-    public void printAllTransportFeature() {
-        super.printAllTransportFeature();
-        System.out.println("car body - " + bodyType + ", car passenger num - "+ passengerNum + ", wheels - " + getWheelCount() + ", fuelConsumption - " + getFuelConsumption());
+    public String toString() {
+        return super.toString() + "bodyType - " + bodyType + ", passengerNum - " + passengerNum;
     }
 }

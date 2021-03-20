@@ -18,12 +18,9 @@ public  abstract class Appliances implements TurnOffOn{
         return model;
     }
 
-    public void printApp(){
-        System.out.println(toString() + " , Appliances ");
-    }
     @Override
     public String toString() {
-        return "Model : " + model + ", appliances power is " + power ;
+        return "Model : " + model + ", appliances power is " + power + ", " ;
     }
 
 }

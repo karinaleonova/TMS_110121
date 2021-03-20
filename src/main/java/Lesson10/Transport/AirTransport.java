@@ -4,19 +4,14 @@ public class AirTransport extends Transport{
     private int wingspan;
     private int runwayLength;
 
-    public int getWingspan() {
-        return wingspan;
+    public AirTransport(String transportBrand, int power, int maxSpeed, int weight,int wingspan,int runwayLength) {
+        super(transportBrand, power, maxSpeed, weight);
+        this.wingspan=wingspan;
+        this.runwayLength=runwayLength;
     }
 
-    public void setWingspan(int wingspan) {
-        this.wingspan = wingspan;
+    @Override
+    public String toString() {
+        return super.toString() + "wingspan -" + wingspan + ", runwayLength - " + runwayLength;
     }
-    public int getRunwayLength() {
-        return runwayLength;
-    }
-
-    public void setRunwayLength(int runwayLength) {
-        this.runwayLength = runwayLength;
-    }
-
 }

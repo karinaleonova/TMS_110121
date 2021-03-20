@@ -6,16 +6,14 @@ import java.util.List;
 public class Run {
     public static void main(String[] args) {
 
-        LargeApp fridge = new Fridge("Atlant", 600);
-        SmallApp blender = new Blender("Bosch",120);
-        List<Appliances> discotheque = Arrays.asList(fridge,blender);
+        LargeApp fridge = new Fridge("Atlant", 600,67,true);
+        SmallApp blender = new Blender("Bosch",120,56,false);
 
-        for (Appliances d : discotheque) {
-            d.printApp();
-        }
-        System.out.println(fridge.returnWeight(678));
-        System.out.println(blender.returnLength(15));
-        System.out.println(fridge.getModel() + TurnOffOn.appOn());
-        System.out.println(fridge.getModel() + TurnOffOn.appOff());
+        System.out.println(fridge.toString());
+        System.out.println(blender.toString());
+
+        System.out.println(fridge.appOff());
+        System.out.println(blender.appOn());
+
     }
 }

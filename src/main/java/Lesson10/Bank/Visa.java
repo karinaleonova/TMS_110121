@@ -1,17 +1,15 @@
 package Lesson10.Bank;
 
 public class Visa extends BankCard{
+    private int clientNum;
 
-
-    public Visa(String name, int limit) {
+    public Visa(String name, int limit, int clientNum) {
         super(name, limit);
-    }
-    @Override
-    public void printLimit() {
-        System.out.println( toString() + " , I have Visa Bank Card");
+        this.clientNum = clientNum;
     }
 
-    public String returnVisaString(){
-        return "Visa is the world's second-largest card payment organization. ";
+    @Override
+    public String toString() {
+        return super.toString() + ", client number - VIS" + clientNum + ", ";
     }
 }
