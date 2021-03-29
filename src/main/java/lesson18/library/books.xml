@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<books>
+    <book>
+        <author>Yann Martel</author>
+        <bookName>Life of Pi</bookName>
+        <genre>ROMAN</genre>
+    </book>
+    <book>
+        <author>Cormac McCarthy</author>
+        <bookName>The Road</bookName>
+        <genre>NOVEL</genre>
+    </book>
+</books>
